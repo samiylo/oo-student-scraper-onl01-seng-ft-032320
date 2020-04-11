@@ -5,7 +5,10 @@ class Scraper
 
   def self.scrape_index_page(index_url)
     html = Nokogiri::HTML(open(index_url)) # Grabs the HTML 
-    htm
+    html.css(".student-card").collect do |student|
+      hash = {
+        
+      }
     
   end
 
