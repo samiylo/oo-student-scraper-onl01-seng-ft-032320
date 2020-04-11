@@ -7,7 +7,7 @@ class Scraper
     html = Nokogiri::HTML(open(index_url)) # Grabs the HTML 
     html.css(".student-card").collect do |student|
       hash = {
-        
+        name: student.css("h")
       }
     
   end
